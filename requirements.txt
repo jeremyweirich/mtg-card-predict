@@ -1,5 +1,7 @@
 pre-commit
 black
 flake8
-mtgsdk
 python-dotenv
+mtgsdk
+boto3
+botocore

@@ -1,10 +1,8 @@
-import os
 from datetime import datetime
 
 from mtgsdk import Set
 
-from settings import DATA_ROOT
-from utils import json_cache
+from utils.cache import s3_cache
 
 
 RELEASE_CUTOFF = datetime(2019, 1, 1)
@@ -15,8 +13,7 @@ def retrieve_sets():
 
 
 def load_sets():
-    cache_path = os.path.join(DATA_ROOT, "sets.json")
-    return json_cache(cache_path, retrieve_sets)
+    return s3_cache("sets/sets.json", retrieve_sets)
 
 
 def recent_sets(cutoff):
