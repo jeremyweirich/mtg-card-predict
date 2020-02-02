@@ -13,7 +13,7 @@ def retrieve_sets():
 
 
 def load_sets():
-    return s3_cache("sets/sets.json", retrieve_sets)
+    return s3_cache("sets.json", retrieve_sets)
 
 
 def recent_sets(cutoff):

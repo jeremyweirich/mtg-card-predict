@@ -5,3 +5,5 @@ python-dotenv
 mtgsdk
 boto3
 botocore
+scikit-learn
+pandas
